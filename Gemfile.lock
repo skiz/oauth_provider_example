@@ -12,6 +12,15 @@ GIT
     oauth-plugin (0.4.0.pre3)
       oauth (>= 0.4.4)
 
+GIT
+  remote: https://github.com/plataformatec/devise.git
+  revision: 7ed1fb116f163842d8013152d8875605179557ec
+  specs:
+    devise (1.2.rc)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.2)
+      warden (~> 1.0.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -46,6 +55,7 @@ GEM
     arel (2.0.6)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
+    bcrypt-ruby (2.1.2)
     builder (2.1.2)
     diff-lcs (1.1.2)
     erubis (2.6.6)
@@ -59,6 +69,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     oauth (0.4.4)
+    orm_adapter (0.0.3)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -100,6 +111,8 @@ GEM
     unicorn (3.1.0)
       kgio (~> 2.0.0)
       rack
+    warden (1.0.2)
+      rack (>= 1.0.0)
 
 PLATFORMS
   ruby
@@ -107,6 +120,7 @@ PLATFORMS
 DEPENDENCIES
   authlogic!
   autotest
+  devise!
   oauth (>= 0.4.0.pre1)
   oauth-plugin!
   rails (= 3.0.3)

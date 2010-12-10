@@ -31,10 +31,11 @@ gem 'unicorn'
 # end
 
 gem 'oauth', '>=0.4.0.pre1'
-gem 'authlogic', :git => 'https://github.com/binarylogic/authlogic.git'
 gem 'oauth-plugin', :git => 'https://github.com/pelle/oauth-plugin.git'
+gem 'devise', :git => 'https://github.com/plataformatec/devise.git'
+gem 'authlogic', :git => 'https://github.com/binarylogic/authlogic.git'
 
-group :test, :development do
+group :development, :test do
   gem 'rspec-rails'
   gem 'autotest'
 end
