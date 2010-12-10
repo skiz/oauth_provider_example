@@ -21,6 +21,13 @@ GIT
       orm_adapter (~> 0.0.2)
       warden (~> 1.0.2)
 
+GIT
+  remote: https://github.com/rails/dynamic_form.git
+  revision: ebb03213ef8268e24c60e5e162b811d199777227
+  specs:
+    dynamic_form (1.0.0)
+      rails (>= 3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -121,6 +128,7 @@ DEPENDENCIES
   authlogic!
   autotest
   devise!
+  dynamic_form!
   oauth (>= 0.4.0.pre1)
   oauth-plugin!
   rails (= 3.0.3)

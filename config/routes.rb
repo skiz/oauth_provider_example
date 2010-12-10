@@ -1,5 +1,25 @@
 Service::Application.routes.draw do
+
+  resources :user_clients
+
+  match '/oauth/test_request',  :to => 'oauth#test_request',  :as => :test_request
+  match '/oauth/token',         :to => 'oauth#token',         :as => :token
+  match '/oauth/access_token',  :to => 'oauth#access_token',  :as => :access_token
+  match '/oauth/request_token', :to => 'oauth#request_token', :as => :request_token
+  match '/oauth/authorize',     :to => 'oauth#authorize',     :as => :authorize
+  match '/oauth',               :to => 'oauth#index',         :as => :oauth
+
   devise_for :users
+  
+  devise_scope :user do
+    get '/sign_in', :to => 'devise/sessions#new'
+    match '/sign_out', :to => 'devise/sessions#destroy'
+    get '/sign_up', :to => 'devise/registrations#new'
+  end
+  
+  resources :users do
+    resource :profile
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -8,6 +28,7 @@ Service::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
   match '/about' => 'welcome#about'
+  match '/contact' => 'welcome#contact'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
