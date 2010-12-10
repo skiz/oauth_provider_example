@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_filter :login_or_oauth_required
   
   respond_to :json
   
