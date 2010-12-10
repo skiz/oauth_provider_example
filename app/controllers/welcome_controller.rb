@@ -1,7 +1,10 @@
 class WelcomeController < ApplicationController
+  before_filter :authenticate_user!, :except => :index
   
   def index
-    render :text => 'SAPI'
+  end
+  
+  def about
   end
   
 end
