@@ -30,7 +30,6 @@ gem 'unicorn'
 #   gem 'webrat'
 # end
 
-group :test do
-  gem 'rspec'
+group :test, :development do
   gem 'rspec-rails'
 end

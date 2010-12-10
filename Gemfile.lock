@@ -88,7 +88,6 @@ PLATFORMS
 
 DEPENDENCIES
   rails (= 3.0.3)
-  rspec
   rspec-rails
   sqlite3-ruby
   unicorn
