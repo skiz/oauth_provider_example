@@ -32,4 +32,5 @@ gem 'unicorn'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'autotest'
 end
