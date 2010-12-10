@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/binarylogic/authlogic.git
+  revision: 66ed79515919fe13016911b10ebe734cf8718dc7
+  specs:
+    authlogic (2.1.6)
+      activesupport
+
+GIT
+  remote: https://github.com/pelle/oauth-plugin.git
+  revision: a66aa150d1ed59250bb978335e8a57f429644500
+  specs:
+    oauth-plugin (0.4.0.pre3)
+      oauth (>= 0.4.4)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -44,6 +58,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    oauth (0.4.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -90,7 +105,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  authlogic!
   autotest
+  oauth (>= 0.4.0.pre1)
+  oauth-plugin!
   rails (= 3.0.3)
   rspec-rails
   sqlite3-ruby
