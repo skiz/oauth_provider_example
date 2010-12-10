@@ -2,3 +2,8 @@
 
 <p>This application is an example of using devise for standard user authentication
    along with providing additional Oauth support for a service layer API.</p>
+   
+<% if logged_in? -%>
+  <h2>Since you are logged in...</h2>
+    <p>You can now you can <%= link_to 'manage your oauth applications', oauth_clients_url %></p>
+<% end -%>
