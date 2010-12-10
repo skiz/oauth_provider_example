@@ -1,0 +1,5 @@
+development:
+  host: 'localhost:3000'
+  
+test:
+  host: 'example.com'
